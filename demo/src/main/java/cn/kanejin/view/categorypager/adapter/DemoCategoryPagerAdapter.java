@@ -9,9 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
 import cn.kanejin.view.CategoryPagerAdapter;
 import cn.kanejin.view.categorypager.R;
 import cn.kanejin.view.categorypager.fragment.DemoCategoryFragment;
@@ -52,14 +49,12 @@ public class DemoCategoryPagerAdapter extends CategoryPagerAdapter {
         return ft;
     }
 
-    @Nullable
     @Override
     public View getCursor(ViewGroup parent) {
         View view = LayoutInflater.from(context).inflate(R.layout.cursor_nav, parent, false);
         return view;
     }
 
-    @NotNull
     @Override
     public RadioButton getNavigatorButton(int position, ViewGroup parent) {
         RadioButton rb = (RadioButton) LayoutInflater.from(context).inflate(R.layout.radio_btn_nav, parent, false);
