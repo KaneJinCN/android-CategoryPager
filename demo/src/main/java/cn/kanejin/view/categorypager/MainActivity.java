@@ -1,7 +1,9 @@
 package cn.kanejin.view.categorypager;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import cn.kanejin.view.CategoryPager;
 import cn.kanejin.view.CategoryPagerAdapter;
@@ -15,17 +17,17 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        buildCategoryPager();
     }
 
-    private CategoryPager mCategoryPager;
-    private CategoryPagerAdapter mCategoryPagerAdapter;
+    public void gotoSegmentedControl(View view) {
+        Intent intent = new Intent(this, SegmentedControlActivity.class);
 
-    private void buildCategoryPager() {
-        mCategoryPager = (CategoryPager) findViewById(R.id.category_pager);
+        startActivity(intent);
+    }
 
-        mCategoryPagerAdapter = new DemoCategoryPagerAdapter(this, this.getSupportFragmentManager());
+    public void gotoCategoryPager(View view) {
+        Intent intent = new Intent(this, CategoryPagerActivity.class);
 
-        mCategoryPager.setAdapter(mCategoryPagerAdapter);
+        startActivity(intent);
     }
 }
