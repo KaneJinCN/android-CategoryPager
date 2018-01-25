@@ -10,7 +10,7 @@
 
     在build.gradle中添加依赖
     ```gradle
-    compile 'cn.kanejin.view:category-pager:1.0.0@aar'
+    compile 'cn.kanejin.view:category-pager:1.0.1@aar'
     ```
 
 2. 在layout里定义CategoryPager
